@@ -70,3 +70,18 @@ for (const item of arr) {
     console.log(item)
 }
 
+function isGoodRecom(user,product){
+let rPrice = user.mostRecentPurchase.price;
+let nPrice = product.price;
+let rColor = user.mostRecentPurchase.color;
+let nColor = product.color;
+let rCat = user.mostRecentPurchase.category;
+let nCat = product.category;
+    
+if (rPrice > nPrice && rColor === nColor && rCat != nCat){okay = true} else {okay = false}
+  
+let solution = {"customerName" : user.username , "isProductRecommended" : okay }
+
+return solution 
+               
+}
